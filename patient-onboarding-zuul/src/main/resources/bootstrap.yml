@@ -1,0 +1,15 @@
+server:
+  port: 8765
+  
+  
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    
+spring:
+  application:
+    name: patient-onbroading-zuul
+    
+    
+    
