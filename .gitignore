@@ -1,15 +1,8 @@
-/.metadata/
-.project
-target/
-RemoveSystemsTempFiles/
-.settings
-/Servers/
-
-
-/.recommenders/
-
+HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 
 ### STS ###
 .apt_generated
@@ -18,6 +11,7 @@ target/
 .project
 .settings
 .springBeans
+.sts4-cache
 
 ### IntelliJ IDEA ###
 .idea
@@ -26,57 +20,12 @@ target/
 *.ipr
 
 ### NetBeans ###
-nbproject/private/
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
 build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
 
-/.metadata/
-
-###second combined gitignore file ###
-
-# compiled output
-/dist
-/tmp
-/out-tsc
-
-# dependencies
-/node_modules
-node_modules/
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-testem.log
-/typings
-
-# e2e
-/e2e/*.js
-/e2e/*.map
-
-# System Files
-.DS_Store
-Thumbs.db
-
-/Angular/Angular-Spring-Heroes/node_modules
+### VS Code ###
+.vscode/
