@@ -9,7 +9,12 @@ eureka:
     
 spring:
   application:
-    name: patient-onbroading-zuul
+    name: PatientOnboarding-zuul
     
     
-    
+zuul:
+  routes:
+    elephant:
+      path: /auth/authenticate
+      service-id: PatientOnboard-AuthenticationService
+      strip-prefix: false
