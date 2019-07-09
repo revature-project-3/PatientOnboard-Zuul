@@ -14,7 +14,13 @@ spring:
     
 zuul:
   routes:
-    elephant:
+    auth:
       path: /auth/authenticate
       service-id: PatientOnboard-AuthenticationService
       strip-prefix: false
+    test:
+      sensitiveHeaders:
+      path: /auth/test
+      service-id: PatientOnboard-AuthenticationService
+      strip-prefix: false
+      
