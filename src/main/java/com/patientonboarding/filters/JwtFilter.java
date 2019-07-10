@@ -31,8 +31,11 @@ public class JwtFilter extends ZuulFilter {
 		HttpServletRequest myreq = cont.getRequest();
 		String requestUrl = URI.create(myreq.getRequestURI()).getPath();
 		String requestPrefix = requestUrl;
-		
-		if (!requestPrefix.equalsIgnoreCase("/auth/authenticate")) {
+		System.out.println(requestPrefix);
+		if (requestPrefix.equalsIgnoreCase("/auth/authenticate") || requestPrefix.equalsIgnoreCase("/auth/registerUser")) {
+			System.out.println("auth or register");
+		} else {
+			System.out.println(requestPrefix);
 			String jwt = myreq.getHeader("authorization");
 			Claims claim = decodeJWT(jwt);
 			if (claim == null) {

@@ -23,4 +23,8 @@ zuul:
       path: /auth/test
       service-id: PatientOnboard-AuthenticationService
       strip-prefix: false
+    register:
+      path: /auth/registerUser
+      service-id: PatientOnboard-AuthenticationService
+      strip-prefix: false
       
