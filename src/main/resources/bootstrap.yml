@@ -27,4 +27,7 @@ zuul:
       path: /auth/registerUser
       service-id: PatientOnboard-AuthenticationService
       strip-prefix: false
-      
+    appointment:
+      path: /appointment/getAppointment
+      service-id: PatientOnboarding-PatientService
+      strip-prefix: false

@@ -35,17 +35,18 @@ public class JwtFilter extends ZuulFilter {
 		if (requestPrefix.equalsIgnoreCase("/auth/authenticate") || requestPrefix.equalsIgnoreCase("/auth/registerUser")) {
 			System.out.println("auth or register");
 		} else {
-			System.out.println(requestPrefix);
 			String jwt = myreq.getHeader("authorization");
 			Claims claim = decodeJWT(jwt);
 			if (claim == null) {
 				// claim invalid
+				System.out.println("Invalid JWT");
 				cont.setSendZuulResponse(false); // disable forwarding
 				cont.setResponseBody("API key not authorized"); // response to client
 				cont.getResponse().setHeader("Content-Type", "text/plain;charset=UTF-8");
 				cont.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
 			}
 		}
+		System.out.println("End of Zuul Filter");
 		return null;
 	}
 
