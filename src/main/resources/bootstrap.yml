@@ -31,3 +31,7 @@ zuul:
       path: /appointment/getAppointment
       service-id: PatientOnboarding-PatientService
       strip-prefix: false
+    demographics:
+      path: /patient/patientdemo
+      service-id: PatientOnboarding-PatientService
+      strip-prefix: false
